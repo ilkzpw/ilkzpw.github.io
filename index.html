@@ -17,7 +17,7 @@
 
 <script>
 !function(){
-	var array = ['media/Save Me.mp3','media/Monody.mp3'], $ = _ => document.getElementById(_), m = new Audio, src;
+	var array = ['media/Save Me.mp3','media/Monody.mp3'], $ = _ => document.getElementById(_), m = new Audio, src, canplay = false;
 	
 	array.sort((a,b) => Math.random()>0.5);
 	
@@ -28,12 +28,20 @@
 	m.src = array.shift();
 	
 	m.addEventListener('ended',()=>{
-		if(src = array.shift()) m.src = src;
+		if(src = array.shift()){
+			m.src = src;
+			canplay = false;
+		}
+	})
+	
+	m.addEventListener('canplay',()=>{
+		canplay = true;
 	})
 	
 	m.play();
 	
 	$('play-icon').addEventListener('click',()=>{
+		if(!canplay) return;
 		var stop = m.volume == 0;
 		m.volume = stop ? 0.3 : 0;
 		$('play-icon').style.background = `url(images/${stop?1:0}.gif)`;
