@@ -30,7 +30,6 @@
 	
 	<link rel="stylesheet" href="http://musicz.qiniudn.com/css/style.css">
 
-
 	<!-- Modernizr JS -->
 	<script src="http://musicz.qiniudn.com/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -39,7 +38,6 @@
 	<![endif]-->
 	<!-- baidu map -->
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=li5MAC6oxbsG9aTcXxdMLOF0nq5l10WQ"></script>
-
 	</head>
 	<body>
 		<div id="fh5co-wrapper">
@@ -99,7 +97,7 @@
 				</div>
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2">
-						<div style="width:700px;height:300px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+						<div style="width:700px;height:200px;border:#ccc solid 1px;font-size:12px;" id="map"></div>
 						<div class="col-md-12 text-center heading-section">
 							<h2>Are Getting Married</h2>
 							<p><strong>on Oct 05, 2017 &mdash; Hubei, Xiangyang</strong></p>
@@ -191,6 +189,7 @@
       setMapEvent();//设置地图事件
       addMapControl();//向地图添加控件
       addMapOverlay();//向地图添加覆盖物
+      $('.').hide();
     }
     function createMap(){ 
       map = new BMap.Map("map"); 

@@ -1268,3 +1268,7 @@ figure {
   z-index: 9999;
   background: url(../images/hourglass.svg) center no-repeat #222222;
 }
+
+#map{position: absolute;top:110px;}
+
+.BMap_Marker .BMapLabel{display: none!important;}
