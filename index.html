@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>test</title>
+</head>
+
+<style>
+#play-icon{
+	width: 14px;
+	height: 11px;
+    display: block;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+	background: url(images/1.gif);
+	cursor: pointer;
+}
+</style>
+
+<body>
+ <h5>test page</h5>
+ <div id="play-icon"></div>
+</body>
+
+<script>
+!function(){
+	var array = ['media/Save Me.mp3','media/Monody.mp3'],$ = _ => document.getElementById(_),m = new Audio;
+	
+	array.sort((a,b) => Math.random()>0.5);
+	
+	m.autoplay = true;
+	
+	m.volume = 0.3;
+	
+	m.src = array.shift();
+	
+	m.addEventListener('ended',()=>{
+		let src;
+		if(src = array.shift()) m.src = src;
+	})
+	
+	m.play();
+	
+	$('play-icon').addEventListener('click',()=>{
+		var stop = m.volume == 0;
+		m.volume = stop ? 0.3 : 0;
+		$('play-icon').style.background = `url(images/${stop?0:1}.gif)`;
+		if(!stop) m.pause(); else m.play();
+	})
+}()
+</script>
+</html>
