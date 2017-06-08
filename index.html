@@ -7,16 +7,7 @@
 </head>
 
 <style>
-#play-icon{
-	width: 14px;
-	height: 11px;
-    display: block;
-    float: right;
-    margin-right: 5px;
-    margin-top: 5px;
-	background: url(images/1.gif);
-	cursor: pointer;
-}
+#play-icon{width: 14px;height: 11px;display: block;float: right;margin-right: 5px;margin-top: 5px;background: url(images/1.gif);cursor: pointer;}
 </style>
 
 <body>
@@ -26,7 +17,7 @@
 
 <script>
 !function(){
-	var array = ['media/Save Me.mp3','media/Monody.mp3'],$ = _ => document.getElementById(_),m = new Audio;
+	var array = ['media/Save Me.mp3','media/Monody.mp3'], $ = _ => document.getElementById(_), m = new Audio, src;
 	
 	array.sort((a,b) => Math.random()>0.5);
 	
@@ -37,7 +28,6 @@
 	m.src = array.shift();
 	
 	m.addEventListener('ended',()=>{
-		let src;
 		if(src = array.shift()) m.src = src;
 	})
 	
