@@ -11,11 +11,11 @@
 <style>
 #play-icon{width: 14px;height: 11px;position: fixed;right: 5px;top: 5px;background: url(images/1.gif);cursor: pointer;}
 </style>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=li5MAC6oxbsG9aTcXxdMLOF0nq5l10WQ"></script>
+<!--script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=li5MAC6oxbsG9aTcXxdMLOF0nq5l10WQ"></script-->
 <body>
  <h5>test page</h5>
  <div id="play-icon"></div>
- <div style="width:700px;height:300px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+ <!--div style="width:700px;height:300px;border:#ccc solid 1px;font-size:12px" id="map"></div-->
 </body>
 
 <script>
@@ -50,7 +50,7 @@
 		$('play-icon').style.background = `url(images/${stop?1:0}.gif)`;
 		if(!stop) m.pause(); else m.play();
 	})
-	
+	/**
 	//创建和初始化地图函数：
     function initMap(){
       createMap();//创建地图
@@ -106,7 +106,7 @@
     }
     var map;
     initMap();
-	
+	*/
 }()
 </script>
 </html>
