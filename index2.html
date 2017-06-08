@@ -183,7 +183,7 @@
 	<!-- jQuery -->
 	<script src="http://musicz.qiniudn.com/dist/scripts.min.js"></script>
 	<script>
-	//创建和初始化地图函数：
+    //创建和初始化地图函数：
     function initMap(){
       createMap();//创建地图
       setMapEvent();//设置地图事件
@@ -192,7 +192,7 @@
     }
     function createMap(){ 
       map = new BMap.Map("map"); 
-      map.centerAndZoom(new BMap.Point(112.414623,32.208772),15);
+      map.centerAndZoom(new BMap.Point(112.413042,32.210849),15);
     }
     function setMapEvent(){
       map.enableScrollWheelZoom();
@@ -207,7 +207,7 @@
     }
     function addMapOverlay(){
       var markers = [
-        {content:"2017年10月5号",title:"朱楼村3组",imageOffset: {width:-46,height:-21},position:{lat:32.211307,lng:112.413078}}
+        {content:"2017年10月5号",title:"朱楼村3组",imageOffset: {width:-46,height:-21},position:{lat:32.211109,lng:112.41306}}
       ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
@@ -231,10 +231,8 @@
       var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
       scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
       map.addControl(scaleControl);
-      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:0});
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:1});
       map.addControl(navControl);
-      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:false});
-      map.addControl(overviewControl);
     }
     var map;
     initMap();
