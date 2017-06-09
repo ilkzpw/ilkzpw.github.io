@@ -1277,9 +1277,9 @@ figure {
 
 @media screen and (max-width: 768px) {
   .fh5co-cover.text-center{
-    background-position-x: -400px!important;
+    background-position-x: center!important;
   }
   #fh5co-started{
-    background-position-x: -350px!important;
+    background-position-x: center!important;
   }
 }
