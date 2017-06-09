@@ -1277,9 +1277,9 @@ figure {
 
 @media screen and (max-width: 768px) {
   .fh5co-cover.text-center{
-		background: url(http://musicz.qiniudn.com/images/8.jpg) center 0!important;
-	}
-	#fh5co-started{
-		background: url(http://musicz.qiniudn.com/images/1.jpg) center 0!important;
-	}
+    background-position-x: -400px!important;
+  }
+  #fh5co-started{
+    background-position-x: -400px!important;
+  }
 }
