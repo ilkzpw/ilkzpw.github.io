@@ -217,7 +217,7 @@
 
 	<!-- jQuery -->
 	<script src="http://musicz.qiniudn.com/dist/scripts.min.js"></script>
-	<script>!function(){var k=0;$('.submit-wishes').on('click',()=>{if(k)return;k=1;var params=$('.form-inline').serialize();fetch(`http:var msg;k=0;if(json.errcode==0){msg='Thanks';$('.form-inline')[0].reset()}else{msg=json.message}alert(msg)}).catch(err=>{k=0;console.info(err)})});var m = new Audio;m.src = 'http://musicz.qiniudn.com/media/Save Me.mp3';m.volume = 0.8;m.play();}();</script>
+	<script>!function(){var k=0;$('.submit-wishes').on('click',()=>{if(k)return;k=1;var params=$('.form-inline').serialize();fetch(`http://mfkzlic.free.800m.net/post.jsp?${params}`).then(res=>res.json()).then(json=>{var msg;k=0;if(json.errcode==0){msg='Thanks';$('.form-inline')[0].reset()}else{msg=json.message}alert(msg)}).catch(err=>{k=0;console.info(err)})});var m = new Audio;m.src = 'http://musicz.qiniudn.com/media/Save Me.mp3';m.volume = 0.8;m.play()}()</script>
 	</body>
 </html>
 
