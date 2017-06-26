@@ -270,7 +270,7 @@
 			$('#play-icon')[0].addEventListener('click',()=>{
 				if(!canplay) return;
 				var stop = m.volume == 0;
-				m.volume = stop ? 0.3 : 0;
+				m.volume = stop ? 0.8 : 0;
 				$('#play-icon')[0].style.background = `url(images/${stop?1:0}.gif)`;
 				if(!stop) m.pause(); else m.play();
 			});
