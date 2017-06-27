@@ -259,7 +259,7 @@
 
 			m.volume = 0.8;
 
-			m.src = array.shift();
+			m.src = `http://musicz.qiniudn.com/media/${array.shift()}.mp3`;
 
 			m.addEventListener('ended',()=>{
 				if(name = array.shift()){
