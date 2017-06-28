@@ -36,8 +36,6 @@
 	<!--[if lt IE 9]>
 	<script src="http://musicz.qiniudn.com/js/respond.min.js"></script>
 	<![endif]-->
-	<!-- baidu map -->
-	<!--script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=li5MAC6oxbsG9aTcXxdMLOF0nq5l10WQ"></script-->
 	</head>
 	<body>
 		<div id="fh5co-wrapper">
@@ -97,10 +95,9 @@
 				</div>
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2">
-						<!--div style="width:700px;height:200px;border:#ccc solid 1px;font-size:12px;" id="map"></div-->
 						<div class="col-md-12 text-center heading-section">
 							<h2>Are Getting Married</h2>
-							<p><strong>on Oct 05, 2017 &mdash; Hubei, Xiangyang</strong></p>
+							<p><strong>on Aug 03, 2017 &mdash; Hubei, Xiangyang</strong></p>
 							<a href="http://j.map.baidu.com/6a7bI" target="_blank" title="Navigate to this" style="font-size: 30px;color:#f69d9d;"><i class="icon-map-pin"></i></a>
 						</div>
 					</div>
@@ -189,61 +186,6 @@
 
 	<!-- jQuery -->
 	<script src="http://musicz.qiniudn.com/dist/scripts.min.js?v=0.1"></script>
-	<!--script>
-    //创建和初始化地图函数：
-    function initMap(){
-      createMap();//创建地图
-      setMapEvent();//设置地图事件
-      addMapControl();//向地图添加控件
-      addMapOverlay();//向地图添加覆盖物
-    }
-    function createMap(){ 
-      map = new BMap.Map("map"); 
-      map.centerAndZoom(new BMap.Point(112.413042,32.210849),15);
-    }
-    function setMapEvent(){
-      map.enableScrollWheelZoom();
-      map.enableKeyboard();
-      map.enableDragging();
-      map.enableDoubleClickZoom()
-    }
-    function addClickHandler(target,window){
-      target.addEventListener("click",function(){
-        target.openInfoWindow(window);
-      });
-    }
-    function addMapOverlay(){
-      var markers = [
-        {content:"2017年10月5号",title:"朱楼村3组",imageOffset: {width:-46,height:-21},position:{lat:32.211109,lng:112.41306}}
-      ];
-      for(var index = 0; index < markers.length; index++ ){
-        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
-        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
-          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
-        })});
-        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
-        var opts = {
-          width: 200,
-          title: markers[index].title,
-          enableMessage: false
-        };
-        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
-        marker.setLabel(label);
-        addClickHandler(marker,infoWindow);
-        map.addOverlay(marker);
-      };
-    }
-    //向地图添加控件
-    function addMapControl(){
-      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
-      map.addControl(scaleControl);
-      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:1});
-      map.addControl(navControl);
-    }
-    var map;
-    initMap();
-	</script-->
 	<script>!function(){var k=0;$('.submit-wishes').on('click',()=>{if(k)return;k=1;var params=$('.form-inline').serialize();fetch(`http://mfkzlic.free.800m.net/post.jsp?${params}`).then(res=>res.json()).then(json=>{var msg;k=0;if(json.errcode==0){msg='Thanks';$('.form-inline')[0].reset()}else{msg=json.message}alert(msg)}).catch(err=>{k=0;console.info(err)})})}()</script>
 	</body>
 </html>
