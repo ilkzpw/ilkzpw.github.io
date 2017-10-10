@@ -186,6 +186,6 @@
 
 	<!-- jQuery -->
 	<script src="http://musicz.qiniudn.com/dist/scripts.min.js?v=0.1"></script>
-	<script>!function(){var k=0;$('.submit-wishes').on('click',()=>{if(k)return;k=1;var params=$('.form-inline').serialize();fetch(`http://mfkzlic.free.800m.net/post.jsp?${params}`).then(res=>res.json()).then(json=>{var msg;k=0;if(json.errcode==0){msg='Thanks';$('.form-inline')[0].reset()}else{msg=json.message}alert(msg)}).catch(err=>{k=0;console.info(err)})})}()</script>
+	<script>!function(){var k=0;$('.submit-wishes').on('click',()=>{alert('The wedding is over!');return;if(k)return;k=1;var params=$('.form-inline').serialize();fetch(`http://mfkzlic.free.800m.net/post.jsp?${params}`).then(res=>res.json()).then(json=>{var msg;k=0;if(json.errcode==0){msg='Thanks';$('.form-inline')[0].reset()}else{msg=json.message}alert(msg)}).catch(err=>{k=0;console.info(err)})})}()</script>
 	</body>
 </html>
