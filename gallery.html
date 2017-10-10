@@ -222,6 +222,8 @@
 		!function(){
 			var k = 0;
 			$('.submit-wishes').on('click',() => {
+				alert('The wedding is over!');
+				return;
 				if(k) return;
 				k = 1;
 				var params = $('.form-inline').serialize();
